@@ -10,27 +10,26 @@ class Team
   end
   
   
-  def calc_win_rate(win,lose)
-    return win.to_f / (win + lose)
+  def calc_win_rate
+    return self.win.to_f / (self.win + self.lose)
   end
   
   def show_team_result
-     rate = calc_win_rate(self.win,self.lose)
-     puts "#{self.name} の2020年の成績は #{self.win}勝 #{self.lose}敗 #{self.draw} 分、勝率は #{rate}です。"
+     puts "#{self.name} の2020年の成績は #{self.win}勝 #{self.lose}敗 #{self.draw} 分、勝率は #{calc_win_rate}です。"
   end
     
 end
 
-team1 = Team.new('Giants',67,45,8)
-team2 = Team.new('Tigers',60,53,7)
-team3 = Team.new('Dragons',60,55,5)
-team4 = Team.new('BayStars',56,58,6)
-team5 = Team.new('Carp',52,56,12)
-team6 = Team.new('Swallows',41,69,10)
+team_Giants = Team.new('Giants',67,45,8)
+team_Tigers = Team.new('Tigers',60,53,7)
+team_Dragons = Team.new('Dragons',60,55,5)
+team_BayStars = Team.new('BayStars',56,58,6)
+team_Carp = Team.new('Carp',52,56,12)
+team_Swallows = Team.new('Swallows',41,69,10)
 
-team1.show_team_result
-team2.show_team_result
-team3.show_team_result
-team4.show_team_result
-team5.show_team_result
-team6.show_team_result
+team_Giants.show_team_result
+team_Tigers.show_team_result
+team_Dragons.show_team_result
+team_BayStars.show_team_result
+team_Carp.show_team_result
+team_Swallows.show_team_result
